@@ -12,6 +12,8 @@ const poolData = {
   ClientId: congnitoConfig.AMAZON_CLIENT_ID,
 };
 
+//  GENERATE THE POOL INSTANCE
+
 const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
 const login = async (req, res, next) => {

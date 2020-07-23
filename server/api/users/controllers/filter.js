@@ -4,7 +4,8 @@ const fs = require("fs");
 const filter = async (req, res, next) => {
   try {
     const b = "/var/log/nginx/access.log";
-    // 
+
+    // READ THE NGINX ACCESS LOG
 
     fs.readFile(b, "utf8", (err, contents) => {
       if (err) {
@@ -14,6 +15,8 @@ const filter = async (req, res, next) => {
           "Permission denied in reading the nginx log"
         );
       }
+
+      // SORT THE DATA IN THE DESCENDING ORDER 
       let data = contents.toString().split(/\n/).reverse();
       if (req.body.key) {
         req.body.bata = data.filter((e) => e.includes(req.body.key));

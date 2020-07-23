@@ -7,6 +7,8 @@ const listnginx = async (req, res, next) => {
   try {
     const b = "/var/log/nginx/access.log";
 
+   //READ THE NGINX ACCESS LOG
+
     fs.readFile(b, "utf8", (err, contents) => {
       if (err) {
         return Services._validationError(
