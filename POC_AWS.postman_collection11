@@ -164,5 +164,12 @@
 			}
 		}
 	],
+	"variable": [
+		{
+			"id": "1eb8e086-162e-47d9-852d-5a1e6a60e2a8",
+			"key": "url",
+			"value": "http://localhost:3210/api"
+		}
+	],
 	"protocolProfileBehavior": {}
 }
