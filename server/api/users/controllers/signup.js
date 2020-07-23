@@ -43,10 +43,16 @@ const signup = async (req, res, next) => {
         return Services._validationError(res, err, "Error in signing up");
       } else {
         let cognitoUser = result.user;
-        Services._response(res, {
-          result,
-          username: cognitoUser.getUsername(),
-        });
+        Services._response(
+          res,
+          {
+            username: cognitoUser.getUsername(),
+            userConfirmed: result.userConfirmed,
+            userSub: result.userSub,
+            codeDeliveryDetails: result.codeDeliveryDetails,
+          },
+          "User successfully signed up"
+        );
       }
     });
   } catch (error) {
