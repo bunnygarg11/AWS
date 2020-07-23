@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "42ab3ada-0d48-45b6-9169-83be29510ab5",
+		"name": "POC_AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"rahull\",\r\n    \"password\": \"Rahul@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nginxlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/listnginx",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"listnginx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"IP ADDRESS/API NAME/DATE/REQUEST METHOD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/filter",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"badbunn\",\r\n    \"password\": \"Rahul@123\",\r\n    \"email\":\"mohitgarg08030@gmail.com\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confirmUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resendToKen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "eyJraWQiOiJ5Z2t5UzZtUkFWZVZ6YldRUFVXRHdLV1wvSFNhTnlIaGZRd0orMm54UEllUT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1NzZmZTBmZi1lNTM1LTQ2NjQtOWJkZi0wMDEzMWYzYWM3YWEiLCJldmVudF9pZCI6ImJiYmEwNmQwLTZkMjItNDFhOS05MDk2LTJmODMxNDQ3MjBkZSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE1OTU1MDQ2MzUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX0pJMVZ4aGphUyIsImV4cCI6MTU5NTUwODIzNSwiaWF0IjoxNTk1NTA0NjM1LCJqdGkiOiJmNThjZTExOC02Y2I4LTQ5MjctOWZiZC1iNzViMzJmNjI3YjIiLCJjbGllbnRfaWQiOiJhMjY4bG8ycjkwNTN0bmFmZjEwOWlvZGU4IiwidXNlcm5hbWUiOiJyYWh1bGwifQ.btDvzjbV3DGpl1RKiLCwhf3FdNfgFTFVwh0298VQA_kCxsYr8xsEJZtjicwxIqeMAGZxVCUvJgmWelIE203zVTaaUZPtG3AczcexA9QEOO05M4r1EfuP52JWhN0MIZx-dNLIXptE1-I3246t1ObXil67Az_6QqZJ3udCSvF-6jvR39znE8VaoI90IkJ7gDCpy7hDq0bPa6bMX4GRlpOz_XLlArLSINR2A2i1Ho6u44cqXgpf2mWRy6yDkj-_4FnuaKK_CgwQ9Z75EH6lZd2o6a5I1y1ocjFKIyxpqiJcopz4Sz246DiXb_XoTRMYXYhxPEOsOVY026ga_jAOtNLAQQ",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-auth-token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a04c8f85-fa83-43dc-9794-e31ffb84982c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "143a2848-bc44-4993-8c3a-26b176c75519",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
