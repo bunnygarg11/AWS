@@ -107,10 +107,26 @@
 		{
 			"name": "confirmUser",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"328321\",\r\n    \"username\": \"badbun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "{{url}}/user/verifyuser",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"verifyuser"
+					]
 				}
 			},
 			"response": []
@@ -118,7 +134,7 @@
 		{
 			"name": "resendToKen",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": ""
@@ -166,7 +182,7 @@
 	],
 	"variable": [
 		{
-			"id": "1eb8e086-162e-47d9-852d-5a1e6a60e2a8",
+			"id": "aec66314-e4e4-427d-b629-31bd4f84834c",
 			"key": "url",
 			"value": "http://localhost:3210/api"
 		}
