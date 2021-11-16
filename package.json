@@ -15,7 +15,7 @@
     "@hapi/joi-date": "^2.0.1",
     "amazon-cognito-identity-js": "^4.3.3",
     "amazon-cognito-identity-js-node": "0.0.3",
-    "aws-sdk": "^2.715.0",
+    "aws-sdk": "^2.814.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
